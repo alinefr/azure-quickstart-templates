@@ -177,9 +177,22 @@
             "enabled": "true",
             "storageUri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName')), '2016-01-01').primaryEndpoints.blob)]"
           }
-        }
+        },
+		"availabilitySet": {
+		  "id": "[resourceId('Microsoft.Compute/availabilitySets', variables('availabilitySetName'))]"
+		}
       }
-    }
+    },
+    {
+      "type": "Microsoft.Compute/availabilitySets",
+      "name": "availabilitySet1",
+      "apiVersion": "2015-06-15",
+      "location": "[parameters('location')]",
+        "properties": {
+        "platformFaultDomainCount": "3",
+        "platformUpdateDomainCount": "20"
+      }
+    }  
   ],
   "outputs": {
     "hostname": {
