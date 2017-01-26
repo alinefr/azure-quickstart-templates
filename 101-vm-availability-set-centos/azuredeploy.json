@@ -14,11 +14,17 @@
         "description": "Password for the Virtual Machine."
       }
     },
-    "dnsLabelPrefix": {
+    "vmName": {
       "type": "string",
       "metadata": {
-        "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
+        "description": "Virtual Machine name."
       }
+    },
+    "availabilitySetName": {
+      "type": "string",
+      "metadata": {
+        "description": "Availability Set Name."
+        }
     },
     "centOSVersion": {
       "type": "string",
@@ -57,7 +63,7 @@
     "virtualNetworkName": "MyVNET",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
-    "availabilitySetName": "myAVSet"
+    "availabilitySetName": "[parameters('availabilitySetName')]"
   },
   "resources": [
     {
