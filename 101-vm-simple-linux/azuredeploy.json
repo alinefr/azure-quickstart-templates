@@ -20,25 +20,29 @@
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
     },
-    "ubuntuOSVersion": {
+    "centOSVersion": {
       "type": "string",
-      "defaultValue": "16.04.0-LTS",
+      "defaultValue": "7.1.20160408",
       "allowedValues": [
-        "12.04.5-LTS",
-        "14.04.5-LTS",
-        "15.10",
-        "16.04.0-LTS"
+        "6.5.20160309",
+        "6.6.20160309",
+        "6.7.20160310",
+        "6.8.20170105",
+        "7.0.20160309",
+        "7.1.20160308",
+        "7.2.20160629",
+        "7.3.20161221"
       ],
       "metadata": {
-        "description": "The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version."
+        "description": "The CentOS version for the VM. This will pick a fully patched image of this given CentOS version."
       }
     }
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'salinuxvm')]",
     "dataDisk1VhdName": "datadisk1",
-    "imagePublisher": "Canonical",
-    "imageOffer": "UbuntuServer",
+    "imagePublisher": "OpenLogic",
+    "imageOffer": "CentOS",
     "OSDiskName": "osdiskforlinuxsimple",
     "nicName": "myVMNic",
     "addressPrefix": "10.0.0.0/16",
@@ -147,7 +151,7 @@
           "imageReference": {
             "publisher": "[variables('imagePublisher')]",
             "offer": "[variables('imageOffer')]",
-            "sku": "[parameters('ubuntuOSVersion')]",
+            "sku": "[parameters('centOSVersion')]",
             "version": "latest"
           },
           "osDisk": {
