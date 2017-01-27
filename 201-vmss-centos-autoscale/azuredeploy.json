@@ -63,10 +63,16 @@
       "metadata": {
         "description": "Subnet range."
       }
+    },
+    "storageAccountType": {
+      "type": "string",
+      "metadata": {
+        "description": "Type of Storage Account. Ex: Standard_LRS."
+      }
     }
   },
   "variables": {
-    "storageAccountType": "Standard_LRS",
+    "storageAccountType": "[parameters('storageAccountType')]",
     "namingInfix": "[toLower(substring(concat(parameters('vmssName'), uniqueString(resourceGroup().id)), 0, 9))]",
     "longNamingInfix": "[toLower(parameters('vmssName'))]",
     "newStorageAccountSuffix": "[concat(variables('namingInfix'), 'sa')]",
