@@ -1,0 +1,30 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmSku": {
+      "value": "Standard_A1"
+    },
+    "centOSVersion": {
+      "value": "16.04.0-LTS"
+    },
+    "vmssName": {
+      "value": "myAutoScale"
+    },
+    "instanceCount": {
+      "value": 5
+    },
+    "adminUsername": {
+      "value": "ubuntu"
+    },
+    "adminPassword": {
+      "value": "Nundrest*75"
+    },
+    "addressPrefix": {
+      "value": "172.17.10.0/24"
+    },
+    "subnetPrefix": {
+      "value": "172.17.10.0/18"
+    }
+  }
+}
