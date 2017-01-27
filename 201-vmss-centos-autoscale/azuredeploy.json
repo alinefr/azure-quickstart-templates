@@ -4,7 +4,6 @@
   "parameters": {
     "vmSku": {
       "type": "string",
-      "defaultValue": "Standard_A1",
       "metadata": {
         "description": "Size of VMs in the VM Scale Set."
       }
@@ -39,6 +38,18 @@
         "description": "Number of VM instances (100 or less)."
       },
       "maxValue": 100
+    },
+    "minimumVM": {
+      "type": "int",
+      "metadata": {
+        "description": "Autoscale minimum number of VMs."
+      }
+    },
+    "maximumVM": {
+      "type": "int",
+      "metadata": {
+        "description": "Autoscale maximum number of VMs."
+      }
     },
     "adminUsername": {
       "type": "string",
@@ -298,8 +309,8 @@
           {
             "name": "Profile1",
             "capacity": {
-              "minimum": "1",
-              "maximum": "10",
+              "minimum": "[parameters('minimumVM')]",
+              "maximum": "[parameters('maximumVM')]",
               "default": "1"
             },
             "rules": [
