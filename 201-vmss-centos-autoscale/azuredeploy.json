@@ -317,8 +317,7 @@
             "name": "Profile1",
             "capacity": {
               "minimum": "[parameters('minimumVM')]",
-              "maximum": "[parameters('maximumVM')]",
-              "default": "1"
+              "maximum": "[parameters('maximumVM')]"
             },
             "rules": [
               {
