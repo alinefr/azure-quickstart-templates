@@ -266,10 +266,12 @@
         "frontendIPConfigurations": [
           {
             "name": "appGwFrontendIP",
+            "type": "Private",
             "properties": {
-              "PublicIPAddress": {
-                "id": "[variables('appGwPublicIPAddressID')]"
-              }
+              "subnet": { 
+                "id": "[variables('appGwSubnetID')]"
+                },
+                "privateIPAllocationMethod": "Dynamic"
             }
           }
         ],
