@@ -1,0 +1,42 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmSku": {
+      "value": "Standard_A0"
+    },
+    "centOSVersion": {
+      "value": "7.2n"
+    },
+    "storageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "vmssName": {
+      "value": "testautoscale99"
+    },
+    "instanceCount": {
+      "value": 1
+    },
+    "minimumVM": {
+      "value": 1
+    },
+    "maximumVM": {
+      "value": 5
+    },
+    "adminUsername": {
+      "value": "centos"
+    },
+    "adminPassword": {
+      "value": "GEN-PASSWD"
+    },
+    "addressPrefix": {
+      "value": "172.0.0.0/18"
+    },
+    "subnetPrefix": {
+      "value": "172.0.0.0/24"
+    },
+    "appGwSubnetPrefix": {
+      "value": "172.0.1.0/24"
+    }
+  }
+}
