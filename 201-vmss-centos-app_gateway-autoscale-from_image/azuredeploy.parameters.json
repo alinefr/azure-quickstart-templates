@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "vmSku": {
-      "value": "Standard_D1_v2"
+      "value": "Standard_A1"
     },
     "centOSVersion": {
       "value": "7.2n"
@@ -11,8 +11,17 @@
     "storageAccountType": {
       "value": "Standard_LRS"
     },
+    "userImageStorageAccountName": {
+      "value": "cvjmgs2ftdhkuvagrant"
+    },
+    "userImageStorageAccountResourceGroupName": {
+      "value": "snowy-dream-39"
+    },
+    "osDiskVhdUri": {
+      "value": "https://cvjmgs2ftdhkuvagrant.blob.core.windows.net/vagrant-vhds/osDisk1.vhd"
+    },
     "vmssName": {
-      "value": "testautoscale"
+      "value": "lambdatestautoscale"
     },
     "instanceCount": {
       "value": 1
@@ -27,7 +36,7 @@
       "value": "centos"
     },
     "adminPassword": {
-      "value": "Nundrest*75"
+      "value": "GEN-PASSWD"
     },
     "addressPrefix": {
       "value": "172.0.0.0/18"
