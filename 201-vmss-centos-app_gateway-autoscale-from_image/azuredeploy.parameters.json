@@ -5,9 +5,6 @@
     "vmSku": {
       "value": "Standard_A0"
     },
-    "storageAccountType": {
-      "value": "Standard_LRS"
-    },
     "osDiskVhdUri": {
       "value": "http://3ofhgwcjsdta2vagrant.blob.core.windows.net/system/Microsoft.Compute/Images/vhds/myVHDNamePrefix-osDisk.605f5080-ca63-403c-9b34-692ece1252d7.vhd"
     },
@@ -27,7 +24,7 @@
       "value": "centos"
     },
     "adminPassword": {
-      "value": "Nundrest*75"
+      "value": "ADD-PASSWORD-HERE!"
     },
     "addressPrefix": {
       "value": "172.0.0.0/18"
@@ -39,4 +36,4 @@
       "value": "172.0.1.0/24"
     }
   }
-}
+
