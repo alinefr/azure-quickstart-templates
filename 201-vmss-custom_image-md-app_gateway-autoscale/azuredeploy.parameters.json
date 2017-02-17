@@ -1,0 +1,39 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmSku": {
+      "value": "Standard_A0"
+    },
+    "osDiskVhdUri": {
+      "value": "/subscriptions/2d40a01a-f283-43da-a045-73fa5a794832/resourceGroups/testmdaline/providers/Microsoft.Compute/disks/osdisk_ghqGzt2Om1"
+    },
+    "vmssName": {
+      "value": "mdtest99"
+    },
+    "instanceCount": {
+      "value": 1
+    },
+    "minimumVM": {
+      "value": 1
+    },
+    "maximumVM": {
+      "value": 5
+    },
+    "adminUsername": {
+      "value": "aline"
+    },
+    "adminPassword": {
+      "value": "Nundrest*75"
+    },
+    "addressPrefix": {
+      "value": "172.0.0.0/24"
+    },
+    "subnetPrefix": {
+      "value": "172.0.0.0/24"
+    },
+    "appGwSubnetPrefix": {
+      "value": "172.0.1.0/24"
+    }
+  }
+}
