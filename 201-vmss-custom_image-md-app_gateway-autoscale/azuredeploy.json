@@ -25,10 +25,10 @@
         "description": "The CentOS version for the VM. This will pick a fully patched image of this given CentOS version."
       }
     },
-    "osDiskVhdUri": {
+    "imageId": {
       "type": "string",
       "metadata": {
-        "description": "Uri of the your user image"
+        "description": "Id of the Managed Disk image."
       }
     },
     "vmssName":{
@@ -312,10 +312,9 @@
         "virtualMachineProfile": {
           "storageProfile": {
             "imageReference": {
-              "id": "[parameters('osDiskVhdUri')]"
+              "id": "[parameters('imageId')]"
             },
             "osDisk": {
-              "name": "[concat(variables('namingInfix'),'-osDisk')]",
               "osType": "[variables('osType')]",
               "caching": "ReadOnly",
               "createOption": "FromImage"
